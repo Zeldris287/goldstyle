@@ -4,11 +4,22 @@ const meuWhatsapp = "5591987654321"; // Seu número real aqui
 // Para adicionar mais, copie uma linha e mude o nome, preço, imagem e categoria
 const produtos = [
     { nome: "Camisa Rose Slim", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
-    { nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
-    { nome: "Sandália Rosé", preco: "120,00", imagem: "5.jpg", categoria: "calcados-fem" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "1.jpg", categoria: "calcados-masc" },
+    { nome: "Sandália Rosé", preco: "120,00", imagem: "13.jpg", categoria: "calcados-fem" },
     { nome: "Vestido Noiva", preco: "199,00", imagem: "2.jpg", categoria: "feminino" },
     { nome: "Camisa Rose Slim", preco: "89,90", imagem: "6.jpg", categoria: "masculino" },
-    // Adicione novos itens aqui abaixo:
+    { nome: "Tênis Runner", preco: "150,00", imagem: "2.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "3.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "5.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "6.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "7.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "8.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "9.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "10.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "11.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "12.jpg", categoria: "calcados-masc" },
+    // Adi{ nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },cione novos itens aqui abaixo:
 ];
 
 function carregarLoja() {
