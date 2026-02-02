@@ -1,37 +1,36 @@
-const meuWhatsapp = "+5591981507858"; //5591981507858
+const meuWhatsapp = "5591987654321";
 
 const produtos = [
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "7.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "8.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "9.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "10.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "11.jpg", categoria: "masculino" }
-    { nome: "Vestido Floral Luxo", preco: "150,00", imagem: "2.jpg", categoria: "feminino" },
-    { nome: "Conjunto Kids Gold", preco: "65,00", imagem: "3.jpg", categoria: "infantil" },
-    { nome: "Sapato Social Couro", preco: "220,00", imagem: "4.jpg", categoria: "calcados" },
-    { nome: "Bolsa Luxo Premium", preco: "2404.jpg", imagem: "2404.jpg", categoria: "acessorios" },
-    { nome: "Kit Batom Matte", preco: "45,00", imagem: "6.jpg", categoria: "maquiagem" }
+    { nome: "Camisa Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
+    { nome: "Vestido Luxo", preco: "150,00", imagem: "2.jpg", categoria: "feminino" },
+    { nome: "Sapato Social", preco: "220,00", imagem: "4.jpg", categoria: "calcados-masc" },
+    { nome: "Salto Alto", preco: "180,00", imagem: "5.jpg", categoria: "calcados-fem" }
 ];
 
 function carregarProdutos() {
-    console.log("Carregando produtos..."); // Para teste
     produtos.forEach(p => {
         const conteudoHTML = `
             <div class="card">
-                <img src="${p.imagem}" alt="${p.nome}" onerror="this.src='https://via.placeholder.com/160?text=Sem+Foto'">
+                <img src="${p.imagem}" onclick="abrirImagem('${p.imagem}')" alt="${p.nome}" onerror="this.src='https://via.placeholder.com/160?text=Sem+Foto'">
                 <h3>${p.nome}</h3>
                 <p>R$ ${p.preco}</p>
-                <a href="https://wa.me/${meuWhatsapp}?text=Olá! Quero o item: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
+                <a href="https://wa.me/${meuWhatsapp}?text=Quero o item: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
             </div>
         `;
 
         const prateleira = document.getElementById(`lista-${p.categoria}`);
-        if (prateleira) {
-            prateleira.innerHTML += conteudoHTML;
-        }
+        if (prateleira) prateleira.innerHTML += conteudoHTML;
     });
 }
 
-// SEGURANÇA: Só roda quando a página inteira carregar
+// Funções para a imagem expandida
+function abrirImagem(src) {
+    document.getElementById("modalImagem").style.display = "flex";
+    document.getElementById("imgExpandida").src = src;
+}
+
+function fecharImagem() {
+    document.getElementById("modalImagem").style.display = "none";
+}
+
 window.onload = carregarProdutos;

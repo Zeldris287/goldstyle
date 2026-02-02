@@ -1,58 +1,42 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; }
+/* ... (mantenha o código anterior e adicione este abaixo) ... */
 
-header {
-    background: #d4af37;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    position: sticky;
+.card img { 
+    width: 100%; 
+    height: 160px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    cursor: pointer; /* Indica que é clicável */
+    transition: 0.3s;
+}
+
+.card img:hover { opacity: 0.8; }
+
+/* ESTILO DO MODAL (IMAGEM ABERTA) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
     top: 0;
-    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
 }
 
-.menu-categorias {
-    margin-top: 10px;
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 5px;
-}
-.menu-categorias a { color: white; text-decoration: none; font-weight: bold; font-size: 0.8rem; flex: 0 0 auto; }
-
-h2 { margin: 25px 0 10px; padding-left: 10px; border-left: 5px solid #d4af37; font-size: 1.2rem; }
-
-/* ROLAGEM LATERAL */
-.rolagem-lateral {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 10px 5px;
-    min-height: 200px; /* Garante que o espaço apareça */
-}
-
-.rolagem-lateral::-webkit-scrollbar { display: none; }
-
-.card {
-    flex: 0 0 160px;
-    background: white;
-    padding: 10px;
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 80%;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
-.card img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; }
-.card h3 { font-size: 0.85rem; margin: 10px 0; height: 35px; overflow: hidden; }
-.card p { color: #d4af37; font-weight: bold; margin-bottom: 10px; }
-
-.btn-whats {
-    display: block;
-    background: #25d366;
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
     color: white;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 5px;
-    font-size: 0.75rem;
+    font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
