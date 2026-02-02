@@ -3,11 +3,11 @@ const meuWhatsapp = "5591987654321"; // Seu número real aqui
 // LISTA DE PRODUTOS
 // Para adicionar mais, copie uma linha e mude o nome, preço, imagem e categoria
 const produtos = [
-    { nome: "Camisa Rose Slim", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
+    { nome: "Camisa Rose Slim", preco: "89,90", imagem: "14.jpg", categoria: "masculino" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "1.jpg", categoria: "calcados-masc" },
     { nome: "Sandália Rosé", preco: "120,00", imagem: "13.jpg", categoria: "calcados-fem" },
-    { nome: "Vestido Noiva", preco: "199,00", imagem: "2.jpg", categoria: "feminino" },
-    { nome: "Camisa Rose Slim", preco: "89,90", imagem: "6.jpg", categoria: "masculino" },
+    { nome: "Vestido Noiva", preco: "199,00", imagem: "15.jpg", categoria: "feminino" },
+    { nome: "Camisa Rose Slim", preco: "89,90", imagem: "16.jpg", categoria: "masculino" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "2.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "3.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
