@@ -5,6 +5,8 @@ const produtos = [
     // CATEGORIA: CAMISAS
     { nome: "Camisa Slim Fit", preco: "89,90", imagem: "1.jpg", categoria: "camisas" },
     { nome: "Camisa Premium", preco: "115,00", imagem: "2.jpg", categoria: "camisas" },
+    { nome: "Camisa Premium", preco: "115,00", imagem: "7.jpg", categoria: "camisas" },
+    { nome: "Camisa Premium", preco: "115,00", imagem: "8.jpg", categoria: "camisas" },
     
     // CATEGORIA: ACESSÓRIOS
     { nome: "Bolsa Gold Luxo", preco: "250,00", imagem: "3.jpg", categoria: "acessorios" },
