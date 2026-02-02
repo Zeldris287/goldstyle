@@ -1,14 +1,14 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: sans-serif; background: #f4f4f4; color: #333; }
+body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; overflow-x: hidden; }
 
 header {
     background: #d4af37;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .menu-categorias {
@@ -20,33 +20,35 @@ header {
 }
 .menu-categorias a { color: white; text-decoration: none; font-weight: bold; font-size: 0.8rem; flex: 0 0 auto; }
 
-.container { padding: 15px; }
+.container { padding: 10px; }
 
-h2 { margin: 20px 0 10px; font-size: 1.2rem; border-left: 5px solid #d4af37; padding-left: 10px; }
+h2 { margin: 25px 0 10px; padding-left: 10px; border-left: 5px solid #d4af37; font-size: 1.2rem; }
 
-/* ROLAGEM LATERAL */
+/* ESTA É A MÁGICA DA ROLAGEM LATERAL */
 .rolagem-lateral {
     display: flex;
-    overflow-x: auto; /* Cria a rolagem lateral */
+    overflow-x: auto;
     gap: 15px;
-    padding: 10px 0;
-    -webkit-overflow-scrolling: touch;
+    padding: 10px 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Suaviza no iPhone */
 }
 
-.rolagem-lateral::-webkit-scrollbar { display: none; } /* Esconde a barra de rolagem */
+/* Esconde a barra de rolagem feia */
+.rolagem-lateral::-webkit-scrollbar { display: none; }
 
 .card {
-    flex: 0 0 160px; /* Largura fixa para permitir a rolagem */
+    flex: 0 0 160px; /* Define que cada produto tem 160px de largura */
     background: white;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
-.card h3 { font-size: 0.9rem; margin: 10px 0; height: 35px; overflow: hidden; }
-.card p { color: #d4af37; font-weight: bold; }
+.card img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; }
+.card h3 { font-size: 0.85rem; margin: 10px 0; height: 35px; overflow: hidden; }
+.card p { color: #d4af37; font-weight: bold; margin-bottom: 10px; }
 
 .btn-whats {
     display: block;
@@ -55,6 +57,6 @@ h2 { margin: 20px 0 10px; font-size: 1.2rem; border-left: 5px solid #d4af37; pad
     text-decoration: none;
     padding: 8px;
     border-radius: 5px;
-    font-size: 0.8rem;
-    margin-top: 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
 }
