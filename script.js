@@ -15,7 +15,7 @@ const produtos = [
     { nome: "Tênis Fila estiloso", preco: "105,00", imagem: "6.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Nike azul royal", preco: "105,00", imagem: "7.jpg", categoria: "calcados-masc" },
     { nome: "Slide Grade Alta Velcro Nike", preco: "75,00", imagem: "8.jpg", categoria: "calcados-masc" },
-    { nome: "Tênis Runner", preco: "150,00", imagem: "9.jpg", categoria: "calcados-masc" },
+    { nome: "Slide Grade Alta Velcro Nike preta", preco: "75,00", imagem: "9.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "10.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "11.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "12.jpg", categoria: "calcados-masc" },
