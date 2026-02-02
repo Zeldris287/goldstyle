@@ -1,39 +1,44 @@
-// Altere para o seu número real
+// Substitua pelo seu número (DDI + DDD + Número)
 const meuWhatsapp = "5591900000000"; 
 
 const produtos = [
-    // CATEGORIA: CAMISAS
-    { nome: "Camisa Slim Fit", preco: "89,90", imagem: "1.jpg", categoria: "camisas" },
-    { nome: "Camisa Premium", preco: "115,00", imagem: "2.jpg", categoria: "camisas" },
-    { nome: "Camisa Premium", preco: "115,00", imagem: "7.jpg", categoria: "camisas" },
-    { nome: "Camisa Premium", preco: "115,00", imagem: "8.jpg", categoria: "camisas" },
+    // CAMISAS
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "camisas" },
+    { nome: "Camisa Polo Luxo", preco: "115,00", imagem: "2.jpg", categoria: "camisas" },
     
-    // CATEGORIA: ACESSÓRIOS
-    { nome: "Bolsa Gold Luxo", preco: "250,00", imagem: "3.jpg", categoria: "acessorios" },
+    // ACESSÓRIOS
+    { nome: "Bolsa Gold Shine", preco: "250,00", imagem: "3.jpg", categoria: "acessorios" },
     { nome: "Relógio Elegance", preco: "180,00", imagem: "4.jpg", categoria: "acessorios" },
     
-    // CATEGORIA: CALÇADOS
-    { nome: "Tênis Sport X", preco: "199,00", imagem: "5.jpg", categoria: "calcados" },
-    { nome: "Sapato Social", preco: "230,00", imagem: "6.jpg", categoria: "calcados" }
+    // CALÇADOS
+    { nome: "Tênis Sport Gold", preco: "199,00", imagem: "5.jpg", categoria: "calcados" },
+    { nome: "Sapato Social", preco: "220,00", imagem: "6.jpg", categoria: "calcados" },
+
+    // INFANTIL
+    { nome: "Conjunto Kids Style", preco: "75,00", imagem: "7.jpg", categoria: "infantil" },
+    { nome: "Tênis Infantil Confort", preco: "95,00", imagem: "8.jpg", categoria: "infantil" }
 ];
 
-function mostrarProdutos() {
+function carregarLoja() {
     produtos.forEach(p => {
         const itemHTML = `
             <div class="card">
                 <img src="${p.imagem}" alt="${p.nome}">
                 <h3>${p.nome}</h3>
                 <p>R$ ${p.preco}</p>
-                <a href="https://wa.me/${meuWhatsapp}?text=Olá! Tenho interesse no item: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
+                <a href="https://wa.me/${meuWhatsapp}?text=Gostei desse: ${p.nome}" target="_blank" class="btn-whats">
+                    WHATSAPP
+                </a>
             </div>
         `;
 
-        // Coloca o item na seção certa baseada na categoria
-        if(p.categoria === "camisas") document.getElementById('lista-camisas').innerHTML += itemHTML;
-        if(p.categoria === "acessorios") document.getElementById('lista-acessorios').innerHTML += itemHTML;
-        if(p.categoria === "calcados") document.getElementById('lista-calcados').innerHTML += itemHTML;
+        // Busca a div da categoria correta
+        const lista = document.getElementById(`cat-${p.categoria}`);
+        if (lista) {
+            lista.innerHTML += itemHTML;
+        }
     });
 }
 
-// Inicia a vitrine
-mostrarProdutos();
+// Inicializa a vitrine
+carregarLoja();
