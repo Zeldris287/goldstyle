@@ -8,7 +8,7 @@ const produtos = [
     { nome: "Sandália Rosé", preco: "120,00", imagem: "13.jpg", categoria: "calcados-fem" },
     { nome: "Vestido Noiva", preco: "199,00", imagem: "15.jpg", categoria: "feminino" },
     { nome: "Camisa Rose Slim", preco: "89,90", imagem: "16.jpg", categoria: "masculino" },
-    { nome: "tênis puma ferrari estiloso", preco: "105,00", imagem: "2.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis puma ferrari estiloso", preco: "105,00", imagem: "2.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "3.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
     { nome: "Tênis Runner", preco: "150,00", imagem: "5.jpg", categoria: "calcados-masc" },
