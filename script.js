@@ -1,33 +1,34 @@
-const meuWhatsapp = "5591987654321"; // Coloque seu número aqui
+const meuWhatsapp = "5591987654321"; // Seu número real aqui
 
-// LISTA DE PRODUTOS - Fácil de adicionar:
+// LISTA DE PRODUTOS
+// Para adicionar mais, copie uma linha e mude o nome, preço, imagem e categoria
 const produtos = [
-    // Categorias: masculino, feminino, infantil, calcados-masc, calcados-fem
-    { nome: "Camisa Rose", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
-    { nome: "Vestido Noiva", preco: "199,00", imagem: "2.jpg", categoria: "feminino" },
-    { nome: "Conjunto Kids", preco: "59,90", imagem: "3.jpg", categoria: "infantil" },
-    { nome: "Tênis Sport", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
+    { nome: "Camisa Rose Slim", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
+    { nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
     { nome: "Sandália Rosé", preco: "120,00", imagem: "5.jpg", categoria: "calcados-fem" },
-    
-    // Adicione novos produtos abaixo desta linha:
+    { nome: "Vestido Noiva", preco: "199,00", imagem: "2.jpg", categoria: "feminino" },
+    // Adicione novos itens aqui abaixo:
 ];
 
 function carregarLoja() {
     produtos.forEach(p => {
-        const item = `
+        const itemHTML = `
             <div class="card">
                 <img src="${p.imagem}" onclick="abrirImagem('${p.imagem}')" alt="${p.nome}" onerror="this.src='https://via.placeholder.com/120?text=Foto'">
                 <h3>${p.nome}</h3>
                 <p>R$ ${p.preco}</p>
-                <a href="https://wa.me/${meuWhatsapp}?text=Olá! Quero comprar o item: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
+                <a href="https://wa.me/${meuWhatsapp}?text=Gostaria de saber mais sobre: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
             </div>
         `;
 
-        const container = document.getElementById(`lista-${p.categoria}`);
-        if (container) container.innerHTML += item;
+        const prateleira = document.getElementById(`lista-${p.categoria}`);
+        if (prateleira) {
+            prateleira.innerHTML += itemHTML;
+        }
     });
 }
 
+// Funções do Modal de Imagem
 function abrirImagem(src) {
     document.getElementById("modalImagem").style.display = "flex";
     document.getElementById("imgExpandida").src = src;
