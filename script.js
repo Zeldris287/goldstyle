@@ -1,44 +1,42 @@
-// Substitua pelo seu número (DDI + DDD + Número)
+// CONFIGURAÇÃO: Seu número de WhatsApp
 const meuWhatsapp = "5591900000000"; 
 
 const produtos = [
-    // CAMISAS
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "camisas" },
-    { nome: "Camisa Polo Luxo", preco: "115,00", imagem: "2.jpg", categoria: "camisas" },
+    // MASCULINO
+    { nome: "Camisa Casual G", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
+    
+    // FEMININO
+    { nome: "Vestido Verão", preco: "120,00", imagem: "2.jpg", categoria: "feminino" },
+    
+    // INFANTIL
+    { nome: "Conjunto Kids", preco: "59,90", imagem: "3.jpg", categoria: "infantil" },
     
     // ACESSÓRIOS
-    { nome: "Bolsa Gold Shine", preco: "250,00", imagem: "3.jpg", categoria: "acessorios" },
-    { nome: "Relógio Elegance", preco: "180,00", imagem: "4.jpg", categoria: "acessorios" },
+    { nome: "Bolsa Luxo Gold", preco: "250,00", imagem: "2404.jpg", categoria: "acessorios" },
     
     // CALÇADOS
-    { nome: "Tênis Sport Gold", preco: "199,00", imagem: "5.jpg", categoria: "calcados" },
-    { nome: "Sapato Social", preco: "220,00", imagem: "6.jpg", categoria: "calcados" },
-
-    // INFANTIL
-    { nome: "Conjunto Kids Style", preco: "75,00", imagem: "7.jpg", categoria: "infantil" },
-    { nome: "Tênis Infantil Confort", preco: "95,00", imagem: "8.jpg", categoria: "infantil" }
+    { nome: "Tênis Sport", preco: "199,00", imagem: "4.jpg", categoria: "calcados" },
+    
+    // MAQUIAGEM
+    { nome: "Batom Matte Red", preco: "35,00", imagem: "5.jpg", categoria: "maquiagem" }
 ];
 
-function carregarLoja() {
+function carregarVitrine() {
     produtos.forEach(p => {
         const itemHTML = `
             <div class="card">
-                <img src="${p.imagem}" alt="${p.nome}">
+                <img src="${p.imagem}" alt="${p.nome}" onerror="this.src='https://via.placeholder.com/150?text=Gold+Style'">
                 <h3>${p.nome}</h3>
                 <p>R$ ${p.preco}</p>
-                <a href="https://wa.me/${meuWhatsapp}?text=Gostei desse: ${p.nome}" target="_blank" class="btn-whats">
-                    WHATSAPP
-                </a>
+                <a href="https://wa.me/${meuWhatsapp}?text=Olá! Tenho interesse no item: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
             </div>
         `;
 
-        // Busca a div da categoria correta
-        const lista = document.getElementById(`cat-${p.categoria}`);
-        if (lista) {
-            lista.innerHTML += itemHTML;
+        const container = document.getElementById(`lista-${p.categoria}`);
+        if (container) {
+            container.innerHTML += itemHTML;
         }
     });
 }
 
-// Inicializa a vitrine
-carregarLoja();
+window.onload = carregarVitrine;
