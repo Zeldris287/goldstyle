@@ -4,7 +4,7 @@ const meuWhatsapp = "5591987654321"; // Seu número real aqui
 // Para adicionar mais, copie uma linha e mude o nome, preço, imagem e categoria
 const produtos = [
     { nome: "Camisa Rose Slim", preco: "89,90", imagem: "14.jpg", categoria: "masculino" },
-    { nome: "Tênis Masculino estiloso, confortável", preco: "105,00", imagem: "1.jpg", categoria: "calcados-masc" },
+    { nome: "Tênis Masculino estiloso,confortável", preco: "105,00", imagem: "1.jpg", categoria: "calcados-masc" },
     { nome: "Sandália Rosé", preco: "120,00", imagem: "13.jpg", categoria: "calcados-fem" },
     { nome: "Vestido Noiva", preco: "199,00", imagem: "15.jpg", categoria: "feminino" },
     { nome: "Camisa Rose Slim", preco: "89,90", imagem: "16.jpg", categoria: "masculino" },
