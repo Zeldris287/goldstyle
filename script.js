@@ -7,6 +7,7 @@ const produtos = [
     { nome: "Tênis Runner", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
     { nome: "Sandália Rosé", preco: "120,00", imagem: "5.jpg", categoria: "calcados-fem" },
     { nome: "Vestido Noiva", preco: "199,00", imagem: "2.jpg", categoria: "feminino" },
+    { nome: "Camisa Rose Slim", preco: "89,90", imagem: "6.jpg", categoria: "masculino" },
     // Adicione novos itens aqui abaixo:
 ];
 
