@@ -7,6 +7,9 @@ const produtos = [
     { nome: "Sapato Social Couro", preco: "220,00", imagem: "4.jpg", categoria: "calcados" },
     { nome: "Bolsa Luxo Premium", preco: "250,00", imagem: "2404.jpg", categoria: "acessorios" },
     { nome: "Kit Batom Matte", preco: "45,00", imagem: "6.jpg", categoria: "maquiagem" }
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "7.jpg", categoria: "masculino" },
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "8.jpg", categoria: "masculino" },
+
 ];
 
 function carregarProdutos() {
