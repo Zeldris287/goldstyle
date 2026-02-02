@@ -1,4 +1,4 @@
-const meuWhatsapp = "559181507858"; // Coloque seu número real aqui
+const meuWhatsapp = "5591981507858"; //
 
 const produtos = [
     { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
