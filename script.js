@@ -2,11 +2,11 @@ const meuWhatsapp = "+5591981507858"; //5591981507858
 
 const produtos = [
     { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" }
-    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "1.jpg", categoria: "masculino" }
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "7.jpg", categoria: "masculino" }
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "8.jpg", categoria: "masculino" }
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "9.jpg", categoria: "masculino" }
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "10.jpg", categoria: "masculino" }
+    { nome: "Camisa Slim Ouro", preco: "89,90", imagem: "11.jpg", categoria: "masculino" }
     { nome: "Vestido Floral Luxo", preco: "150,00", imagem: "2.jpg", categoria: "feminino" },
     { nome: "Conjunto Kids Gold", preco: "65,00", imagem: "3.jpg", categoria: "infantil" },
     { nome: "Sapato Social Couro", preco: "220,00", imagem: "4.jpg", categoria: "calcados" },
