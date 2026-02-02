@@ -1,4 +1,3 @@
-/* --- RESET BÁSICO --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,107 +5,65 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif, Arial;
-    background-color: #fdfdfd;
-}
-
-/* --- CABEÇALHO --- */
-header {
-    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-    color: #1a1a1a;
-    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     text-align: center;
 }
 
-.logo {
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+header {
+    background-color: #d4af37; /* Cor Ouro */
+    color: white;
+    padding: 30px 10px;
+    margin-bottom: 20px;
 }
 
-/* --- CONTAINER PRINCIPAL --- */
 .container {
+    display: grid;
+    /* No celular mostra 2 produtos lado a lado, no PC mostra mais */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    padding: 15px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    /* Aqui ele deixa de ser grid para as sessões ficarem uma abaixo da outra */
 }
 
-/* --- TÍTULOS DAS SESSÕES (Acessórios, Camisas, etc) --- */
-.titulo-categoria {
-    font-size: 1.8rem;
-    color: #1a1a1a;
-    margin: 40px 0 20px 0;
-    padding-left: 15px;
-    border-left: 6px solid #b38728;
-    text-transform: uppercase;
-    width: 100%;
-    clear: both; /* Garante que nada fique do lado do título */
-}
-
-/* --- GRADE DE PRODUTOS (O que faz ficar lado a lado) --- */
-.grid-produtos {
-    display: grid;
-    /* Cria colunas automáticas: no PC 4 ou 5, no Celular 1 ou 2 */
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-/* --- CARTÃO DO PRODUTO --- */
 .produto-card {
     background: white;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: 0.3s;
-}
-
-.produto-card:hover {
-    transform: translateY(-5px);
-    border-color: #bf953f;
 }
 
 .produto-card img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 10px;
 }
 
 .produto-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    height: 40px; /* Garante alinhamento dos nomes */
+    overflow: hidden;
 }
 
 .produto-card p {
+    color: #d4af37;
     font-weight: bold;
-    color: #b38728;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* --- BOTÃO --- */
 .btn-whatsapp {
-    background-color: #1a1a1a;
-    color: #bf953f;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-weight: bold;
-    border: 1px solid #bf953f;
-    transition: 0.3s;
-}
-
-.btn-whatsapp:hover {
     background-color: #25d366;
     color: white;
-    border-color: #25d366;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
 }
