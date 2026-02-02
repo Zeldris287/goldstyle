@@ -1,38 +1,30 @@
-const meuWhatsapp = "5591987654321"; // Seu número
+const meuWhatsapp = "5591987654321"; // Coloque seu número aqui
 
+// LISTA DE PRODUTOS - Fácil de adicionar:
 const produtos = [
-    // MASCULINO
-    { nome: "Camisa Ouro Slim", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
-    { nome: "Polo Premium", preco: "110,00", imagem: "2.jpg", categoria: "masculino" },
-
-    // FEMININO
-    { nome: "Vestido Floral", preco: "150,00", imagem: "3.jpg", categoria: "feminino" },
-
-    // INFANTIL
-    { nome: "Conjunto Kids", preco: "65,00", imagem: "4.jpg", categoria: "infantil" },
-
-    // CALÇADOS MASCULINOS
-    { nome: "Sapato Social", preco: "220,00", imagem: "5.jpg", categoria: "calcados-masc" },
-
-    // CALÇADOS FEMININOS
-    { nome: "Sandália Luxo", preco: "180,00", imagem: "6.jpg", categoria: "calcados-fem" }
+    // Categorias: masculino, feminino, infantil, calcados-masc, calcados-fem
+    { nome: "Camisa Rose", preco: "89,90", imagem: "1.jpg", categoria: "masculino" },
+    { nome: "Vestido Noiva", preco: "199,00", imagem: "2.jpg", categoria: "feminino" },
+    { nome: "Conjunto Kids", preco: "59,90", imagem: "3.jpg", categoria: "infantil" },
+    { nome: "Tênis Sport", preco: "150,00", imagem: "4.jpg", categoria: "calcados-masc" },
+    { nome: "Sandália Rosé", preco: "120,00", imagem: "5.jpg", categoria: "calcados-fem" },
+    
+    // Adicione novos produtos abaixo desta linha:
 ];
 
-function carregarProdutos() {
+function carregarLoja() {
     produtos.forEach(p => {
-        const itemHTML = `
+        const item = `
             <div class="card">
-                <img src="${p.imagem}" onclick="abrirImagem('${p.imagem}')" alt="${p.nome}" onerror="this.src='https://via.placeholder.com/160?text=Sem+Foto'">
+                <img src="${p.imagem}" onclick="abrirImagem('${p.imagem}')" alt="${p.nome}" onerror="this.src='https://via.placeholder.com/120?text=Foto'">
                 <h3>${p.nome}</h3>
                 <p>R$ ${p.preco}</p>
-                <a href="https://wa.me/${meuWhatsapp}?text=Quero comprar: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
+                <a href="https://wa.me/${meuWhatsapp}?text=Olá! Quero comprar o item: ${p.nome}" target="_blank" class="btn-whats">WHATSAPP</a>
             </div>
         `;
 
-        const prateleira = document.getElementById(`lista-${p.categoria}`);
-        if (prateleira) {
-            prateleira.innerHTML += itemHTML;
-        }
+        const container = document.getElementById(`lista-${p.categoria}`);
+        if (container) container.innerHTML += item;
     });
 }
 
@@ -45,5 +37,4 @@ function fecharImagem() {
     document.getElementById("modalImagem").style.display = "none";
 }
 
-// Inicia a loja
-window.onload = carregarProdutos;
+window.onload = carregarLoja;
