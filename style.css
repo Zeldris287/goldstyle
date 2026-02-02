@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; overflow-x: hidden; }
+body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; }
 
 header {
     background: #d4af37;
@@ -20,25 +20,21 @@ header {
 }
 .menu-categorias a { color: white; text-decoration: none; font-weight: bold; font-size: 0.8rem; flex: 0 0 auto; }
 
-.container { padding: 10px; }
-
 h2 { margin: 25px 0 10px; padding-left: 10px; border-left: 5px solid #d4af37; font-size: 1.2rem; }
 
-/* ESTA É A MÁGICA DA ROLAGEM LATERAL */
+/* ROLAGEM LATERAL */
 .rolagem-lateral {
     display: flex;
     overflow-x: auto;
     gap: 15px;
     padding: 10px 5px;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Suaviza no iPhone */
+    min-height: 200px; /* Garante que o espaço apareça */
 }
 
-/* Esconde a barra de rolagem feia */
 .rolagem-lateral::-webkit-scrollbar { display: none; }
 
 .card {
-    flex: 0 0 160px; /* Define que cada produto tem 160px de largura */
+    flex: 0 0 160px;
     background: white;
     padding: 10px;
     border-radius: 10px;
