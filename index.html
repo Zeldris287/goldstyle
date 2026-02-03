@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Style | Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">GOLD STYLE</h1>
+        <nav class="menu-categorias">
+            <a href="#masculino">Masculino</a>
+            <a href="#feminino">Feminino</a>
+            <a href="#infantil">Infantil</a>
+            <a href="#calcados-masc">Calçados Masc</a>
+            <a href="#calcados-fem">Calçados Fem</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2 id="masculino">Moda Masculina</h2>
+            <div id="container-masculino" class="categoria-container"></div>
+        </section>
+
+        <section>
+            <h2 id="feminino">Moda Feminina</h2>
+            <div id="container-feminino" class="categoria-container"></div>
+        </section>
+
+        <section>
+            <h2 id="infantil">Moda Infantil</h2>
+            <div id="container-infantil" class="categoria-container"></div>
+        </section>
+
+        <section>
+            <h2 id="calcados-masc">Calçados Masculinos</h2>
+            <div id="container-calcados-masc" class="categoria-container"></div>
+        </section>
+
+        <section>
+            <h2 id="calcados-fem">Calçados Femininos</h2>
+            <div id="container-calcados-fem" class="categoria-container"></div>
+        </section>
+    </main>
+
+    <div id="modalImagem" class="modal" onclick="fecharImagem()">
+        <span class="fechar">&times;</span>
+        <img class="modal-conteudo" id="imgExpandida">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
