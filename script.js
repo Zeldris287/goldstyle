@@ -171,6 +171,7 @@ const produtos = [
     { nome: "Salto Forrado 34 ao 39", preco: "130,00", imagem: "129.jpg", categoria: "calcados-fem" },
     { nome: "Salto Forrado 34 ao 39", preco: "130,00", imagem: "130.jpg", categoria: "calcados-fem" },
     { nome: "Salto Forrado 34 ao 39", preco: "130,00", imagem: "169.jpg", categoria: "calcados-fem" },
+    { nome: "Salto Forrado 34 ao 39", preco: "150,00", imagem: "164jpg", categoria: "calcados-fem" },
 
 ];
 
