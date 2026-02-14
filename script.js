@@ -2,7 +2,7 @@ const meuwhatsapp = "5591981507858"; // Seu número real
 
 const produtos = [
     // MASCULINO
-    { nome: "Blusas malha peruana Boss ", preco: "65,00", imagem: "1.jpg", categoria: "masculino" },
+    { 
     { nome: "Blusas malha peruana Lacoste", preco: "65,0", imagem: "2.jpg", categoria: "masculino" },
     { nome: "Blusas malha peruana Nike", preco: "65,00", imagem: "3.jpg", categoria: "masculino" },
     { nome: "Blusas malha peruana Lacoste", preco: "65,00", imagem: "4.jpg", categoria: "masculino" },
